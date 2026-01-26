@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buyan Forge™ | Australian Tabletop Game Studio</title>
+  <meta name="description" content="Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games inspired by ancient folklore, mythic worlds, and the cycle of fate." />
+  <meta name="theme-color" content="#0b0b10" />
+
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --panel:#11111a;
+      --text:#e9e9f0;
+      --muted:#b9b9c8;
+      --line:rgba(255,255,255,.12);
+      --accent:#d7b36a;
+      --accent2:#7f8cff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(127,140,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 30%, rgba(215,179,106,.14), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 64px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:10px 0 28px;border-bottom:1px solid var(--line);
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;text-decoration:none;
+    }
+    .mark{
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg, rgba(215,179,106,.95), rgba(127,140,255,.85));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .brand strong{font-size:15px;letter-spacing:.6px}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{
+      text-decoration:none;color:var(--muted);
+      padding:8px 10px;border-radius:10px;border:1px solid transparent;
+    }
+    nav a:hover{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.04)}
+
+    .hero{padding:56px 0 34px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    @media (max-width: 900px){.hero{grid-template-columns:1fr}}
+    h1{margin:0 0 12px;font-size:44px;line-height:1.08;letter-spacing:-.5px}
+    .lead{margin:0 0 22px;color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:14px;text-decoration:none;
+      border:1px solid var(--line);background:rgba(255,255,255,.04);
+    }
+    .btn.primary{
+      border-color:rgba(215,179,106,.35);
+      background:linear-gradient(135deg, rgba(215,179,106,.22), rgba(127,140,255,.12));
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .card{
+      border:1px solid var(--line);background:rgba(17,17,26,.75);
+      border-radius:18px;padding:18px;box-shadow:0 10px 40px rgba(0,0,0,.25)
+    }
+    .kicker{color:var(--accent);letter-spacing:.18em;text-transform:uppercase;font-size:12px;margin:0 0 8px}
+    .mini{color:var(--muted);font-size:14px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+    .pill{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px}
+
+    section{padding:34px 0;border-top:1px solid var(--line)}
+    h2{margin:0 0 12px;font-size:26px}
+    p{margin:0 0 12px;color:var(--muted)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width: 900px){.two{grid-template-columns:1fr}}
+
+    footer{padding-top:24px;color:var(--muted);font-size:14px}
+    .fine{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Buyan Forge Home">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <strong>Buyan Forge™</strong><br />
+          <span class="mini">Australian tabletop game studio</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#kickstarter">Kickstarter</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top" class="hero">
+      <div>
+        <p class="kicker">Myth • Ritual • Play</p>
+        <h1>Where heroes are reforged, and fate is reshaped.</h1>
+        <p class="lead">
+          Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games
+          inspired by ancient folklore, mythic worlds, and the timeless cycle of fate.
+        </p>
+        <div class="cta">
+          <!-- Replace the # with your real Kickstarter prelaunch / campaign link -->
+          <a class="btn primary" href="#kickstarter">Follow the Kickstarter</a>
+          <a class="btn" href="#about">Discover Buyan Forge</a>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <span class="pill">Original IP</span>
+            <p class="mini" style="margin-top:10px">New settings, new systems, and lore-first design.</p>
+          </div>
+          <div class="card">
+            <span class="pill">Folklore-inspired</span>
+            <p class="mini" style="margin-top:10px">Ancient myths, strange islands, and liminal worlds.</p>
+          </div>
+          <div class="card">
+            <span class="pill">Community-led</span>
+            <p class="mini" style="margin-top:10px">Built transparently with feedback from backers and players.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <p class="kicker">The legend</p>
+        <h2 style="margin:0 0 10px">Buyan</h2>
+        <p>
+          Our name comes from Buyan, a legendary island from Slavic folklore — a hidden place between worlds,
+          where destinies shift and the impossible becomes possible.
+        </p>
+        <p class="mini">
+          In the same spirit, Buyan Forge exists as a creative space where ideas are reforged into meaningful play experiences.
+        </p>
+      </aside>
+    </main>
+
+    <section id="about">
+      <h2>About the studio</h2>
+      <div class="two">
+        <div class="card">
+          <p>
+            Buyan Forge™ is dedicated to crafting tabletop experiences that feel like stepping into a myth —
+            where risk, growth, and transformation unfold around the table.
+          </p>
+          <p>
+            We believe games are more than entertainment: they are rituals of imagination, shared stories,
+            and choices that matter.
+          </p>
+        </div>
+        <div class="card">
+          <p class="kicker">What we’re building</p>
+          <p class="mini">
+            This project is our first step. Kickstarter helps us bring it to life transparently,
+            collaboratively, and with the community at its heart.
+          </p>
+          <p class="mini" style="margin-top:10px">
+            Want to be part of the forge? Follow the campaign and join the journey.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy">
+      <h2>Design philosophy</h2>
+      <div class="grid">
+        <div class="card">
+          <p class="kicker">Meaningful decisions</p>
+          <p class="mini">Tension, tradeoffs, and choices you’ll remember after the game ends.</p>
+        </div>
+        <div class="card">
+          <p class="kicker">Mythic atmosphere</p>
+          <p class="mini">Worldbuilding that feels ancient, strange, and alive.</p>
+        </div>
+        <div class="card">
+          <p class="kicker">Shared transformation</p>
+          <p class="mini">Players grow together through risk, triumph, and consequence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kickstarter">
+      <h2>Kickstarter</h2>
+      <div class="card">
+        <p>
+          We’re bringing our first game to life with Kickstarter — openly, with regular updates,
+          and with the community shaping the final experience.
+        </p>
+        <p class="mini">Add your campaign link here once ready.</p>
+        <div class="cta" style="margin-top:10px">
+          <!-- Replace with real URL -->
+          <a class="btn primary" href="https://kickstarter.com" target="_blank" rel="noopener">Go to Kickstarter</a>
+          <a class="btn" href="#contact">Get notified</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="mini">Email and social links can go here. If you tell me your preferred contact email + socials, I’ll wire them in.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fine">
+        <div>© <span id="y"></span> Buyan Forge™. All rights reserved.</div>
+        <div class="mini">Built on GitHub Pages • buyanforge.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
