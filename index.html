@@ -105,6 +105,24 @@
 
     footer{padding-top:24px;color:var(--muted);font-size:14px}
     .fine{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+
+    .mail-link{
+      text-decoration: underline;
+      text-decoration-color: rgba(215,179,106,.45);
+      text-underline-offset: 3px;
+    }
+
+    /* Join community line under hero CTAs */
+    .join-line{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .join-line a{
+      text-decoration: underline;
+      text-decoration-color: rgba(127,140,255,.55);
+      text-underline-offset: 3px;
+    }
   </style>
 </head>
 <body>
@@ -143,6 +161,7 @@
           Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games
           inspired by ancient folklore, mythic worlds, and the timeless cycle of fate.
         </p>
+
         <div class="cta">
           <a class="btn primary"
              href="https://www.kickstarter.com/profile/buyanforge"
@@ -151,6 +170,12 @@
             Follow the Kickstarter
           </a>
           <a class="btn" href="#about" data-i18n="hero.ctaDiscover">Discover Buyan Forge</a>
+        </div>
+
+        <!-- Join the community (Discord) -->
+        <div class="join-line">
+          <span data-i18n="hero.joinPrefix">Join the community:</span>
+          <a href="https://discord.gg/A5pXxn84FG" target="_blank" rel="noopener" data-i18n="hero.joinLink">Discord</a>
         </div>
 
         <div class="grid">
@@ -252,10 +277,18 @@
         <p class="mini" data-i18n="contact.lead">Follow Buyan Forge and join the journey:</p>
 
         <div class="cta" style="margin-top:12px">
+          <a class="btn" href="#" id="emailBtn" data-i18n="contact.email">Email</a>
+          <a class="btn" href="https://discord.gg/A5pXxn84FG" target="_blank" rel="noopener" data-i18n="contact.discord">Discord</a>
+          <a class="btn" href="https://www.facebook.com/groups/1584491572868606" target="_blank" rel="noopener" data-i18n="contact.facebook">Facebook</a>
           <a class="btn" href="https://www.instagram.com/buyanforge" target="_blank" rel="noopener" data-i18n="contact.ig">Instagram</a>
           <a class="btn" href="https://x.com/BuyanForge" target="_blank" rel="noopener" data-i18n="contact.x">X / Twitter</a>
           <a class="btn primary" href="https://www.kickstarter.com/profile/buyanforge" target="_blank" rel="noopener" data-i18n="contact.ks">Kickstarter</a>
         </div>
+
+        <p class="mini" style="margin-top:12px">
+          <span data-i18n="contact.emailLabel">Email:</span>
+          <a href="#" id="emailText" class="mail-link" aria-label="Email Buyan Forge"></a>
+        </p>
       </div>
     </section>
 
@@ -264,6 +297,8 @@
         <div data-i18n="footer.copyright">© <span id="y"></span> Buyan Forge™. All rights reserved.</div>
         <div class="mini" data-i18n="footer.built">
           Built on GitHub Pages •
+          <a href="https://discord.gg/A5pXxn84FG" target="_blank" rel="noopener">Discord</a> •
+          <a href="https://www.facebook.com/groups/1584491572868606" target="_blank" rel="noopener">Facebook</a> •
           <a href="https://www.instagram.com/buyanforge" target="_blank" rel="noopener">Instagram</a> •
           <a href="https://x.com/BuyanForge" target="_blank" rel="noopener">X</a> •
           <a href="https://www.kickstarter.com/profile/buyanforge" target="_blank" rel="noopener">Kickstarter</a>
@@ -273,7 +308,6 @@
   </div>
 
   <script>
-    // ---------- i18n dictionary ----------
     const I18N = {
       en: {
         "header.tagline": "Australian tabletop game studio",
@@ -287,6 +321,8 @@
         "hero.lead": "Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games inspired by ancient folklore, mythic worlds, and the timeless cycle of fate.",
         "hero.ctaKickstarter": "Follow the Kickstarter",
         "hero.ctaDiscover": "Discover Buyan Forge",
+        "hero.joinPrefix": "Join the community:",
+        "hero.joinLink": "Discord",
 
         "cards.ip.title": "Original IP",
         "cards.ip.text": "New settings, new systems, and lore-first design.",
@@ -323,12 +359,16 @@
 
         "contact.title": "Contact",
         "contact.lead": "Follow Buyan Forge and join the journey:",
+        "contact.email": "Email",
+        "contact.emailLabel": "Email:",
+        "contact.discord": "Discord",
+        "contact.facebook": "Facebook",
         "contact.ig": "Instagram",
         "contact.x": "X / Twitter",
         "contact.ks": "Kickstarter",
 
         "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. All rights reserved.",
-        "footer.built": "Built on GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+        "footer.built": "Built on GitHub Pages • <a href=\"https://discord.gg/A5pXxn84FG\" target=\"_blank\" rel=\"noopener\">Discord</a> • <a href=\"https://www.facebook.com/groups/1584491572868606\" target=\"_blank\" rel=\"noopener\">Facebook</a> • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
       },
 
       ru: {
@@ -343,6 +383,8 @@
         "hero.lead": "Buyan Forge™ — независимая австралийская студия настольных игр, создающая оригинальные карточные и настольные проекты, вдохновлённые древними мифами, легендарными мирами и вечным циклом судьбы.",
         "hero.ctaKickstarter": "Подписаться на Kickstarter",
         "hero.ctaDiscover": "Узнать о Buyan Forge",
+        "hero.joinPrefix": "Присоединяйтесь к сообществу:",
+        "hero.joinLink": "Discord",
 
         "cards.ip.title": "Оригинальная вселенная",
         "cards.ip.text": "Новые миры, новые системы и лор в основе дизайна.",
@@ -379,12 +421,16 @@
 
         "contact.title": "Контакты",
         "contact.lead": "Следите за Buyan Forge и присоединяйтесь:",
+        "contact.email": "Почта",
+        "contact.emailLabel": "Почта:",
+        "contact.discord": "Discord",
+        "contact.facebook": "Facebook",
         "contact.ig": "Instagram",
         "contact.x": "X / Twitter",
         "contact.ks": "Kickstarter",
 
         "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Все права защищены.",
-        "footer.built": "Сайт на GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+        "footer.built": "Сайт на GitHub Pages • <a href=\"https://discord.gg/A5pXxn84FG\" target=\"_blank\" rel=\"noopener\">Discord</a> • <a href=\"https://www.facebook.com/groups/1584491572868606\" target=\"_blank\" rel=\"noopener\">Facebook</a> • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
       },
 
       de: {
@@ -399,6 +445,8 @@
         "hero.lead": "Buyan Forge™ ist ein unabhängiges australisches Tabletop-Studio, das originelle Karten- und Brettspiele erschafft – inspiriert von alter Folklore, mythischen Welten und dem zeitlosen Kreislauf des Schicksals.",
         "hero.ctaKickstarter": "Kickstarter folgen",
         "hero.ctaDiscover": "Buyan Forge entdecken",
+        "hero.joinPrefix": "Werde Teil der Community:",
+        "hero.joinLink": "Discord",
 
         "cards.ip.title": "Eigene IP",
         "cards.ip.text": "Neue Settings, neue Systeme und Lore-first Design.",
@@ -435,12 +483,16 @@
 
         "contact.title": "Kontakt",
         "contact.lead": "Folge Buyan Forge und werde Teil der Reise:",
+        "contact.email": "E-Mail",
+        "contact.emailLabel": "E-Mail:",
+        "contact.discord": "Discord",
+        "contact.facebook": "Facebook",
         "contact.ig": "Instagram",
         "contact.x": "X / Twitter",
         "contact.ks": "Kickstarter",
 
         "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Alle Rechte vorbehalten.",
-        "footer.built": "Erstellt mit GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+        "footer.built": "Erstellt mit GitHub Pages • <a href=\"https://discord.gg/A5pXxn84FG\" target=\"_blank\" rel=\"noopener\">Discord</a> • <a href=\"https://www.facebook.com/groups/1584491572868606\" target=\"_blank\" rel=\"noopener\">Facebook</a> • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
       },
 
       uk: {
@@ -455,6 +507,8 @@
         "hero.lead": "Buyan Forge™ — незалежна австралійська студія настільних ігор, що створює оригінальні карткові та настільні проєкти, натхненні давнім фольклором, міфічними світами та вічним циклом долі.",
         "hero.ctaKickstarter": "Стежити на Kickstarter",
         "hero.ctaDiscover": "Відкрити Buyan Forge",
+        "hero.joinPrefix": "Приєднуйтеся до спільноти:",
+        "hero.joinLink": "Discord",
 
         "cards.ip.title": "Оригінальна IP",
         "cards.ip.text": "Нові світи, нові системи та лор у центрі дизайну.",
@@ -469,7 +523,7 @@
         "legend.body2": "У цьому ж дусі Buyan Forge — творча майстерня, де ідеї перековуються у змістовні ігрові враження.",
 
         "about.title": "Про студію",
-        "about.p1": "Buyan Forge™ створює настільні ігри, що відчуваються як крок у міф — де ризик, зростання та трансформація відбуваються разом за столом.",
+        "about.p1": "Buyan Forge™ створює настільні ігри, що відчуваються як крок у міф — де ризик, зростання та трансформація відбувається разом за столом.",
         "about.p2": "Ми віримо, що ігри — це більше, ніж розвага: це ритуали уяви, спільні історії та рішення, які мають значення.",
         "about.sideKicker": "Що ми створюємо",
         "about.side1": "Цей проєкт — наш перший крок. Kickstarter допомагає втілити його прозоро, спільно й з громадою в центрі.",
@@ -491,16 +545,19 @@
 
         "contact.title": "Контакти",
         "contact.lead": "Стежте за Buyan Forge та приєднуйтеся:",
+        "contact.email": "Ел. пошта",
+        "contact.emailLabel": "Ел. пошта:",
+        "contact.discord": "Discord",
+        "contact.facebook": "Facebook",
         "contact.ig": "Instagram",
         "contact.x": "X / Twitter",
         "contact.ks": "Kickstarter",
 
         "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Усі права захищено.",
-        "footer.built": "Зроблено на GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+        "footer.built": "Зроблено на GitHub Pages • <a href=\"https://discord.gg/A5pXxn84FG\" target=\"_blank\" rel=\"noopener\">Discord</a> • <a href=\"https://www.facebook.com/groups/1584491572868606\" target=\"_blank\" rel=\"noopener\">Facebook</a> • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
       }
     };
 
-    // ---------- helpers ----------
     function detectLanguage() {
       const saved = localStorage.getItem("bf_lang");
       if (saved && I18N[saved]) return saved;
@@ -515,16 +572,13 @@
     function applyTranslations(lang) {
       const dict = I18N[lang] || I18N.en;
 
-      // set <html lang="">
       document.documentElement.setAttribute("lang", lang);
 
-      // translate elements with data-i18n
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         const val = dict[key];
         if (!val) return;
 
-        // allow HTML for footer strings (links)
         if (key.startsWith("footer.")) {
           el.innerHTML = val;
         } else {
@@ -532,13 +586,37 @@
         }
       });
 
-      // keep year updated (footer translation rewrites it)
       const y = document.getElementById("y");
       if (y) y.textContent = new Date().getFullYear();
     }
 
-    // ---------- init ----------
+    function setupEmail() {
+      const user = "info";
+      const domain = "buyanforge.com";
+      const addr = user + "@" + domain;
+
+      const subject = encodeURIComponent("Buyan Forge Enquiry");
+      const mailto = "mailto:" + addr + "?subject=" + subject;
+
+      const btn = document.getElementById("emailBtn");
+      const text = document.getElementById("emailText");
+
+      if (text) {
+        text.textContent = addr;
+        text.href = mailto;
+      }
+
+      if (btn) {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.location.href = mailto;
+        });
+      }
+    }
+
     (function init() {
+      document.getElementById("y").textContent = new Date().getFullYear();
+
       const langSelect = document.getElementById("lang");
       const initial = detectLanguage();
 
@@ -550,6 +628,8 @@
         localStorage.setItem("bf_lang", next);
         applyTranslations(next);
       });
+
+      setupEmail();
     })();
   </script>
 </body>
