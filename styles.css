@@ -7,7 +7,9 @@
     --accent:#d7b36a;
     --accent2:#7f8cff;
   }
+  
   *{box-sizing:border-box}
+  
   body{
     margin:0;
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -18,20 +20,26 @@
     color:var(--text);
     line-height:1.55;
   }
+  
   a{color:inherit}
+  
   .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 64px}
+  
   header{
     display:flex;align-items:center;justify-content:space-between;gap:16px;
     padding:10px 0 28px;border-bottom:1px solid var(--line);
   }
+  
   .brand{
     display:flex;align-items:center;gap:12px;text-decoration:none;
   }
+  
   .mark{
     width:38px;height:38px;border-radius:12px;
     background:linear-gradient(135deg, rgba(215,179,106,.95), rgba(127,140,255,.85));
-    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
   }
+  
   .brand strong{font-size:15px;letter-spacing:.6px}
   
   .top-right{
@@ -43,10 +51,12 @@
   }
   
   nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+  
   nav a{
     text-decoration:none;color:var(--muted);
     padding:8px 10px;border-radius:10px;border:1px solid transparent;
   }
+  
   nav a:hover{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.04)}
   
   .lang{
@@ -62,39 +72,105 @@
     font-size:14px;
   }
   
-  .hero{padding:56px 0 34px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-  @media (max-width: 900px){.hero{grid-template-columns:1fr}}
-  h1{margin:0 0 12px;font-size:44px;line-height:1.08;letter-spacing:-.5px}
-  .lead{margin:0 0 22px;color:var(--muted);font-size:18px}
+  .hero{
+    padding:56px 0 34px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:28px;
+  }
+  
+  @media (max-width: 900px){
+    .hero{grid-template-columns:1fr}
+  }
+  
+  h1{
+    margin:0 0 12px;
+    font-size:44px;
+    line-height:1.08;
+    letter-spacing:-.5px;
+  }
+  
+  .lead{
+    margin:0 0 22px;
+    color:var(--muted);
+    font-size:18px;
+  }
+  
   .cta{display:flex;gap:12px;flex-wrap:wrap}
+  
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:12px 14px;border-radius:14px;text-decoration:none;
     border:1px solid var(--line);background:rgba(255,255,255,.04);
   }
+  
   .btn.primary{
     border-color:rgba(215,179,106,.35);
     background:linear-gradient(135deg, rgba(215,179,106,.22), rgba(127,140,255,.12));
   }
+  
   .btn:hover{transform:translateY(-1px)}
+  
   .card{
-    border:1px solid var(--line);background:rgba(17,17,26,.75);
-    border-radius:18px;padding:18px;box-shadow:0 10px 40px rgba(0,0,0,.25)
+    border:1px solid var(--line);
+    background:rgba(17,17,26,.75);
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 10px 40px rgba(0,0,0,.25)
   }
-  .kicker{color:var(--accent);letter-spacing:.18em;text-transform:uppercase;font-size:12px;margin:0 0 8px}
+  
+  .kicker{
+    color:var(--accent);
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-size:12px;
+    margin:0 0 8px;
+  }
+  
   .mini{color:var(--muted);font-size:14px;margin:0}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-  @media (max-width: 900px){.grid{grid-template-columns:1fr}}
-  .pill{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px}
+  
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:16px;
+  }
+  
+  @media (max-width: 900px){
+    .grid{grid-template-columns:1fr}
+  }
+  
+  .pill{
+    display:inline-block;
+    font-size:12px;
+    color:var(--muted);
+    border:1px solid var(--line);
+    padding:6px 10px;
+    border-radius:999px;
+  }
   
   section{padding:34px 0;border-top:1px solid var(--line)}
+  
   h2{margin:0 0 12px;font-size:26px}
+  
   p{margin:0 0 12px;color:var(--muted)}
+  
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media (max-width: 900px){.two{grid-template-columns:1fr}}
+  
+  @media (max-width: 900px){
+    .two{grid-template-columns:1fr}
+  }
   
   footer{padding-top:24px;color:var(--muted);font-size:14px}
-  .fine{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+  
+  .fine{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+    border-top:1px solid var(--line);
+    padding-top:18px;
+  }
   
   .mail-link{
     text-decoration: underline;
@@ -107,12 +183,24 @@
     margin-top:12px;
     color:var(--muted);
     font-size:14px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
   }
-  .join-line a{
+  
+  /* on desktop it's an underlined link; on mobile it becomes a chip */
+  .join-chip{
     text-decoration: underline;
     text-decoration-color: rgba(127,140,255,.55);
     text-underline-offset: 3px;
+    border-radius:12px;
   }
+  
+  /* small utility helpers */
+  .mt10{margin-top:10px !important;}
+  .mt12{margin-top:12px !important;}
+  .h2-tight{margin:0 0 10px}
   
   /* -------- Phone-friendly adjustments -------- */
   @media (max-width: 600px){
@@ -141,6 +229,7 @@
       width:100%;
       gap:8px;
     }
+  
     nav a{
       padding:7px 9px;
       font-size:14px;
@@ -161,45 +250,31 @@
       margin-bottom:16px;
     }
   
-    .cta{
-      gap:10px;
-    }
+    .cta{gap:10px}
   
+    /* Big finger-friendly buttons */
     .btn{
       width:100%;
       padding:12px 14px;
     }
   
-    .card{
-      padding:16px;
-    }
+    .card{padding:16px}
   
-    section{
-      padding:26px 0;
-    }
+    section{padding:26px 0}
   
-    h2{
-      font-size:22px;
-    }
+    h2{font-size:22px}
   
     .fine{
       flex-direction:column;
       align-items:flex-start;
     }
   
-    .join-line{
-      margin-top:10px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-    }
-    .join-line a{
+    /* Make Discord join link a real tappable chip on phones */
+    .join-chip{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       padding:10px 12px;
-      border-radius:12px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       text-decoration:none;
