@@ -43,12 +43,34 @@
       box-shadow: 0 10px 30px rgba(0,0,0,.35);
     }
     .brand strong{font-size:15px;letter-spacing:.6px}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
+
+    .top-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
     nav a{
       text-decoration:none;color:var(--muted);
       padding:8px 10px;border-radius:10px;border:1px solid transparent;
     }
     nav a:hover{color:var(--text);border-color:var(--line);background:rgba(255,255,255,.04)}
+
+    .lang{
+      appearance:none;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:14px;
+    }
 
     .hero{padding:56px 0 34px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
     @media (max-width: 900px){.hero{grid-template-columns:1fr}}
@@ -92,84 +114,94 @@
         <div class="mark" aria-hidden="true"></div>
         <div>
           <strong>Buyan Forge™</strong><br />
-          <span class="mini">Australian tabletop game studio</span>
+          <span class="mini" data-i18n="header.tagline">Australian tabletop game studio</span>
         </div>
       </a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#philosophy">Philosophy</a>
-        <a href="#kickstarter">Kickstarter</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+      <div class="top-right">
+        <select class="lang" id="lang" aria-label="Language selector">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="de">Deutsch</option>
+          <option value="uk">Українська</option>
+        </select>
+
+        <nav>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
+          <a href="#kickstarter" data-i18n="nav.kickstarter">Kickstarter</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="top" class="hero">
       <div>
-        <p class="kicker">Myth • Ritual • Play</p>
-        <h1>Where heroes are reforged, and fate is reshaped.</h1>
-        <p class="lead">
+        <p class="kicker" data-i18n="hero.kicker">Myth • Ritual • Play</p>
+        <h1 data-i18n="hero.title">Where heroes are reforged, and fate is reshaped.</h1>
+        <p class="lead" data-i18n="hero.lead">
           Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games
           inspired by ancient folklore, mythic worlds, and the timeless cycle of fate.
         </p>
         <div class="cta">
-          <!-- Replace the # with your real Kickstarter prelaunch / campaign link -->
           <a class="btn primary"
-          href="https://www.kickstarter.com/profile/buyanforge"
-          target="_blank" rel="noopener">
-         Follow the Kickstarter
-       </a>
-                 <a class="btn" href="#about">Discover Buyan Forge</a>
+             href="https://www.kickstarter.com/profile/buyanforge"
+             target="_blank" rel="noopener"
+             data-i18n="hero.ctaKickstarter">
+            Follow the Kickstarter
+          </a>
+          <a class="btn" href="#about" data-i18n="hero.ctaDiscover">Discover Buyan Forge</a>
         </div>
 
         <div class="grid">
           <div class="card">
-            <span class="pill">Original IP</span>
-            <p class="mini" style="margin-top:10px">New settings, new systems, and lore-first design.</p>
+            <span class="pill" data-i18n="cards.ip.title">Original IP</span>
+            <p class="mini" style="margin-top:10px" data-i18n="cards.ip.text">New settings, new systems, and lore-first design.</p>
           </div>
           <div class="card">
-            <span class="pill">Folklore-inspired</span>
-            <p class="mini" style="margin-top:10px">Ancient myths, strange islands, and liminal worlds.</p>
+            <span class="pill" data-i18n="cards.folklore.title">Folklore-inspired</span>
+            <p class="mini" style="margin-top:10px" data-i18n="cards.folklore.text">Ancient myths, strange islands, and liminal worlds.</p>
           </div>
           <div class="card">
-            <span class="pill">Community-led</span>
-            <p class="mini" style="margin-top:10px">Built transparently with feedback from backers and players.</p>
+            <span class="pill" data-i18n="cards.community.title">Community-led</span>
+            <p class="mini" style="margin-top:10px" data-i18n="cards.community.text">Built transparently with feedback from backers and players.</p>
           </div>
         </div>
       </div>
 
       <aside class="card">
-        <p class="kicker">The legend</p>
-        <h2 style="margin:0 0 10px">Buyan</h2>
-        <p>
+        <p class="kicker" data-i18n="legend.kicker">The legend</p>
+        <h2 style="margin:0 0 10px" data-i18n="legend.title">Buyan</h2>
+        <p data-i18n="legend.body1">
           Our name comes from Buyan, a legendary island from Slavic folklore — a hidden place between worlds,
           where destinies shift and the impossible becomes possible.
         </p>
-        <p class="mini">
+        <p class="mini" data-i18n="legend.body2">
           In the same spirit, Buyan Forge exists as a creative space where ideas are reforged into meaningful play experiences.
         </p>
       </aside>
     </main>
 
     <section id="about">
-      <h2>About the studio</h2>
+      <h2 data-i18n="about.title">About the studio</h2>
       <div class="two">
         <div class="card">
-          <p>
+          <p data-i18n="about.p1">
             Buyan Forge™ is dedicated to crafting tabletop experiences that feel like stepping into a myth —
             where risk, growth, and transformation unfold around the table.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             We believe games are more than entertainment: they are rituals of imagination, shared stories,
             and choices that matter.
           </p>
         </div>
         <div class="card">
-          <p class="kicker">What we’re building</p>
-          <p class="mini">
+          <p class="kicker" data-i18n="about.sideKicker">What we’re building</p>
+          <p class="mini" data-i18n="about.side1">
             This project is our first step. Kickstarter helps us bring it to life transparently,
             collaboratively, and with the community at its heart.
           </p>
-          <p class="mini" style="margin-top:10px">
+          <p class="mini" style="margin-top:10px" data-i18n="about.side2">
             Want to be part of the forge? Follow the campaign and join the journey.
           </p>
         </div>
@@ -177,91 +209,348 @@
     </section>
 
     <section id="philosophy">
-      <h2>Design philosophy</h2>
+      <h2 data-i18n="philosophy.title">Design philosophy</h2>
       <div class="grid">
         <div class="card">
-          <p class="kicker">Meaningful decisions</p>
-          <p class="mini">Tension, tradeoffs, and choices you’ll remember after the game ends.</p>
+          <p class="kicker" data-i18n="philosophy.c1k">Meaningful decisions</p>
+          <p class="mini" data-i18n="philosophy.c1t">Tension, tradeoffs, and choices you’ll remember after the game ends.</p>
         </div>
         <div class="card">
-          <p class="kicker">Mythic atmosphere</p>
-          <p class="mini">Worldbuilding that feels ancient, strange, and alive.</p>
+          <p class="kicker" data-i18n="philosophy.c2k">Mythic atmosphere</p>
+          <p class="mini" data-i18n="philosophy.c2t">Worldbuilding that feels ancient, strange, and alive.</p>
         </div>
         <div class="card">
-          <p class="kicker">Shared transformation</p>
-          <p class="mini">Players grow together through risk, triumph, and consequence.</p>
+          <p class="kicker" data-i18n="philosophy.c3k">Shared transformation</p>
+          <p class="mini" data-i18n="philosophy.c3t">Players grow together through risk, triumph, and consequence.</p>
         </div>
       </div>
     </section>
 
     <section id="kickstarter">
-      <h2>Kickstarter</h2>
+      <h2 data-i18n="ks.title">Kickstarter</h2>
       <div class="card">
-        <p>
+        <p data-i18n="ks.p1">
           We’re bringing our first game to life with Kickstarter — openly, with regular updates,
           and with the community shaping the final experience.
         </p>
-        <p class="mini">Add your campaign link here once ready.</p>
+        <p class="mini" data-i18n="ks.p2">Follow the page to get notified when we launch.</p>
         <div class="cta" style="margin-top:10px">
-          <!-- Replace with real URL -->
           <a class="btn primary"
-          href="https://www.kickstarter.com/profile/buyanforge"
-          target="_blank" rel="noopener">
-         Go to Kickstarter
-       </a>
-                 <a class="btn" href="#contact">Get notified</a>
+             href="https://www.kickstarter.com/profile/buyanforge"
+             target="_blank" rel="noopener"
+             data-i18n="ks.cta">
+            Go to Kickstarter
+          </a>
+          <a class="btn" href="#contact" data-i18n="ks.cta2">Get notified</a>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 data-i18n="contact.title">Contact</h2>
       <div class="card">
-        <p class="mini">
-            <div class="card">
-                <p class="mini">Follow Buyan Forge and join the journey:</p>
-              
-                <div class="cta" style="margin-top:12px">
-                  <a class="btn"
-                     href="https://www.instagram.com/buyanforge"
-                     target="_blank" rel="noopener">
-                    Instagram
-                  </a>
-              
-                  <a class="btn"
-                     href="https://x.com/BuyanForge"
-                     target="_blank" rel="noopener">
-                    X / Twitter
-                  </a>
-              
-                  <a class="btn primary"
-                     href="https://www.kickstarter.com/profile/buyanforge"
-                     target="_blank" rel="noopener">
-                    Kickstarter
-                  </a>
-                </div>
-              </div>
-              
+        <p class="mini" data-i18n="contact.lead">Follow Buyan Forge and join the journey:</p>
 
-        </p>
+        <div class="cta" style="margin-top:12px">
+          <a class="btn" href="https://www.instagram.com/buyanforge" target="_blank" rel="noopener" data-i18n="contact.ig">Instagram</a>
+          <a class="btn" href="https://x.com/BuyanForge" target="_blank" rel="noopener" data-i18n="contact.x">X / Twitter</a>
+          <a class="btn primary" href="https://www.kickstarter.com/profile/buyanforge" target="_blank" rel="noopener" data-i18n="contact.ks">Kickstarter</a>
+        </div>
       </div>
     </section>
 
     <footer>
       <div class="fine">
-        <div>© <span id="y"></span> Buyan Forge™. All rights reserved.</div>
-        <div class="mini">
-            Built on GitHub Pages •
-            <a href="https://www.instagram.com/buyanforge" target="_blank" rel="noopener">Instagram</a> •
-            <a href="https://x.com/BuyanForge" target="_blank" rel="noopener">X</a> •
-            <a href="https://www.kickstarter.com/profile/buyanforge" target="_blank" rel="noopener">Kickstarter</a>
-          </div>
-                </div>
+        <div data-i18n="footer.copyright">© <span id="y"></span> Buyan Forge™. All rights reserved.</div>
+        <div class="mini" data-i18n="footer.built">
+          Built on GitHub Pages •
+          <a href="https://www.instagram.com/buyanforge" target="_blank" rel="noopener">Instagram</a> •
+          <a href="https://x.com/BuyanForge" target="_blank" rel="noopener">X</a> •
+          <a href="https://www.kickstarter.com/profile/buyanforge" target="_blank" rel="noopener">Kickstarter</a>
+        </div>
+      </div>
     </footer>
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // ---------- i18n dictionary ----------
+    const I18N = {
+      en: {
+        "header.tagline": "Australian tabletop game studio",
+        "nav.about": "About",
+        "nav.philosophy": "Philosophy",
+        "nav.kickstarter": "Kickstarter",
+        "nav.contact": "Contact",
+
+        "hero.kicker": "Myth • Ritual • Play",
+        "hero.title": "Where heroes are reforged, and fate is reshaped.",
+        "hero.lead": "Buyan Forge™ is an independent Australian tabletop game studio crafting original card and board games inspired by ancient folklore, mythic worlds, and the timeless cycle of fate.",
+        "hero.ctaKickstarter": "Follow the Kickstarter",
+        "hero.ctaDiscover": "Discover Buyan Forge",
+
+        "cards.ip.title": "Original IP",
+        "cards.ip.text": "New settings, new systems, and lore-first design.",
+        "cards.folklore.title": "Folklore-inspired",
+        "cards.folklore.text": "Ancient myths, strange islands, and liminal worlds.",
+        "cards.community.title": "Community-led",
+        "cards.community.text": "Built transparently with feedback from backers and players.",
+
+        "legend.kicker": "The legend",
+        "legend.title": "Buyan",
+        "legend.body1": "Our name comes from Buyan, a legendary island from Slavic folklore — a hidden place between worlds, where destinies shift and the impossible becomes possible.",
+        "legend.body2": "In the same spirit, Buyan Forge exists as a creative space where ideas are reforged into meaningful play experiences.",
+
+        "about.title": "About the studio",
+        "about.p1": "Buyan Forge™ is dedicated to crafting tabletop experiences that feel like stepping into a myth — where risk, growth, and transformation unfold around the table.",
+        "about.p2": "We believe games are more than entertainment: they are rituals of imagination, shared stories, and choices that matter.",
+        "about.sideKicker": "What we’re building",
+        "about.side1": "This project is our first step. Kickstarter helps us bring it to life transparently, collaboratively, and with the community at its heart.",
+        "about.side2": "Want to be part of the forge? Follow the campaign and join the journey.",
+
+        "philosophy.title": "Design philosophy",
+        "philosophy.c1k": "Meaningful decisions",
+        "philosophy.c1t": "Tension, tradeoffs, and choices you’ll remember after the game ends.",
+        "philosophy.c2k": "Mythic atmosphere",
+        "philosophy.c2t": "Worldbuilding that feels ancient, strange, and alive.",
+        "philosophy.c3k": "Shared transformation",
+        "philosophy.c3t": "Players grow together through risk, triumph, and consequence.",
+
+        "ks.title": "Kickstarter",
+        "ks.p1": "We’re bringing our first game to life with Kickstarter — openly, with regular updates, and with the community shaping the final experience.",
+        "ks.p2": "Follow the page to get notified when we launch.",
+        "ks.cta": "Go to Kickstarter",
+        "ks.cta2": "Get notified",
+
+        "contact.title": "Contact",
+        "contact.lead": "Follow Buyan Forge and join the journey:",
+        "contact.ig": "Instagram",
+        "contact.x": "X / Twitter",
+        "contact.ks": "Kickstarter",
+
+        "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. All rights reserved.",
+        "footer.built": "Built on GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+      },
+
+      ru: {
+        "header.tagline": "Австралийская студия настольных игр",
+        "nav.about": "О студии",
+        "nav.philosophy": "Подход",
+        "nav.kickstarter": "Kickstarter",
+        "nav.contact": "Контакты",
+
+        "hero.kicker": "Миф • Ритуал • Игра",
+        "hero.title": "Где герои перековываются, а судьба меняет форму.",
+        "hero.lead": "Buyan Forge™ — независимая австралийская студия настольных игр, создающая оригинальные карточные и настольные проекты, вдохновлённые древними мифами, легендарными мирами и вечным циклом судьбы.",
+        "hero.ctaKickstarter": "Подписаться на Kickstarter",
+        "hero.ctaDiscover": "Узнать о Buyan Forge",
+
+        "cards.ip.title": "Оригинальная вселенная",
+        "cards.ip.text": "Новые миры, новые системы и лор в основе дизайна.",
+        "cards.folklore.title": "Вдохновлено фольклором",
+        "cards.folklore.text": "Древние мифы, странные острова и миры между мирами.",
+        "cards.community.title": "Вместе с сообществом",
+        "cards.community.text": "Создаём прозрачно и с обратной связью от игроков и бэкеров.",
+
+        "legend.kicker": "Легенда",
+        "legend.title": "Буян",
+        "legend.body1": "Наше имя происходит от Буяна — легендарного острова из славянского фольклора, скрытого места между мирами, где судьбы меняются и невозможное становится возможным.",
+        "legend.body2": "В том же духе Buyan Forge — творческое пространство, где идеи перековываются в игры со смыслом.",
+
+        "about.title": "О студии",
+        "about.p1": "Buyan Forge™ создаёт настольные игры, которые ощущаются как шаг в миф — где риск, рост и трансформация происходят за столом вместе с друзьями.",
+        "about.p2": "Мы верим, что игры — это больше, чем развлечение: это ритуалы воображения, совместные истории и решения, которые имеют значение.",
+        "about.sideKicker": "Что мы создаём",
+        "about.side1": "Этот проект — наш первый шаг. Kickstarter помогает воплотить его открыто, совместно и с сообществом в центре процесса.",
+        "about.side2": "Хотите быть частью кузницы? Подпишитесь на кампанию и присоединяйтесь к путешествию.",
+
+        "philosophy.title": "Философия дизайна",
+        "philosophy.c1k": "Осознанные решения",
+        "philosophy.c1t": "Напряжение, выбор и последствия, которые остаются с вами после партии.",
+        "philosophy.c2k": "Мифическая атмосфера",
+        "philosophy.c2t": "Миры, которые кажутся древними, странными и живыми.",
+        "philosophy.c3k": "Общая трансформация",
+        "philosophy.c3t": "Игроки меняются вместе — через риск, победы и цену выбора.",
+
+        "ks.title": "Kickstarter",
+        "ks.p1": "Мы запускаем нашу первую игру на Kickstarter — открыто, с регулярными обновлениями и с участием сообщества в создании финального опыта.",
+        "ks.p2": "Подпишитесь, чтобы получить уведомление о запуске.",
+        "ks.cta": "Перейти на Kickstarter",
+        "ks.cta2": "Получить уведомление",
+
+        "contact.title": "Контакты",
+        "contact.lead": "Следите за Buyan Forge и присоединяйтесь:",
+        "contact.ig": "Instagram",
+        "contact.x": "X / Twitter",
+        "contact.ks": "Kickstarter",
+
+        "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Все права защищены.",
+        "footer.built": "Сайт на GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+      },
+
+      de: {
+        "header.tagline": "Australisches Tabletop-Spielestudio",
+        "nav.about": "Über uns",
+        "nav.philosophy": "Philosophie",
+        "nav.kickstarter": "Kickstarter",
+        "nav.contact": "Kontakt",
+
+        "hero.kicker": "Mythos • Ritual • Spiel",
+        "hero.title": "Wo Helden neu geschmiedet werden und das Schicksal Gestalt annimmt.",
+        "hero.lead": "Buyan Forge™ ist ein unabhängiges australisches Tabletop-Studio, das originelle Karten- und Brettspiele erschafft – inspiriert von alter Folklore, mythischen Welten und dem zeitlosen Kreislauf des Schicksals.",
+        "hero.ctaKickstarter": "Kickstarter folgen",
+        "hero.ctaDiscover": "Buyan Forge entdecken",
+
+        "cards.ip.title": "Eigene IP",
+        "cards.ip.text": "Neue Settings, neue Systeme und Lore-first Design.",
+        "cards.folklore.title": "Von Folklore inspiriert",
+        "cards.folklore.text": "Alte Mythen, seltsame Inseln und Zwischenwelten.",
+        "cards.community.title": "Community-getrieben",
+        "cards.community.text": "Transparent entwickelt – mit Feedback von Backern und Spieler:innen.",
+
+        "legend.kicker": "Die Legende",
+        "legend.title": "Buyan",
+        "legend.body1": "Unser Name stammt von Buyan, einer legendären Insel aus der slawischen Folklore – ein verborgener Ort zwischen den Welten, an dem sich Schicksale wenden und das Unmögliche möglich wird.",
+        "legend.body2": "In diesem Geist ist Buyan Forge ein kreativer Raum, in dem Ideen zu bedeutungsvollen Spielerlebnissen geschmiedet werden.",
+
+        "about.title": "Über das Studio",
+        "about.p1": "Buyan Forge™ erschafft Tabletop-Erlebnisse, die sich anfühlen wie ein Schritt in einen Mythos – wo Risiko, Wachstum und Transformation gemeinsam am Tisch stattfinden.",
+        "about.p2": "Wir glauben, Spiele sind mehr als Unterhaltung: Sie sind Rituale der Vorstellungskraft, geteilte Geschichten und Entscheidungen, die zählen.",
+        "about.sideKicker": "Woran wir arbeiten",
+        "about.side1": "Dieses Projekt ist unser erster Schritt. Kickstarter hilft uns, es transparent, kollaborativ und gemeinsam mit der Community zum Leben zu erwecken.",
+        "about.side2": "Du willst Teil der Schmiede sein? Folge der Kampagne und geh den Weg mit uns.",
+
+        "philosophy.title": "Design-Philosophie",
+        "philosophy.c1k": "Bedeutsame Entscheidungen",
+        "philosophy.c1t": "Spannung, Abwägungen und Entscheidungen, die in Erinnerung bleiben.",
+        "philosophy.c2k": "Mythische Atmosphäre",
+        "philosophy.c2t": "Worldbuilding, das sich uralt, fremd und lebendig anfühlt.",
+        "philosophy.c3k": "Geteilte Veränderung",
+        "philosophy.c3t": "Spieler:innen wachsen gemeinsam – durch Risiko, Triumph und Konsequenz.",
+
+        "ks.title": "Kickstarter",
+        "ks.p1": "Wir bringen unser erstes Spiel über Kickstarter zum Leben – offen, mit regelmäßigen Updates und gemeinsam mit der Community.",
+        "ks.p2": "Folge der Seite, um beim Launch benachrichtigt zu werden.",
+        "ks.cta": "Zu Kickstarter",
+        "ks.cta2": "Benachrichtigen lassen",
+
+        "contact.title": "Kontakt",
+        "contact.lead": "Folge Buyan Forge und werde Teil der Reise:",
+        "contact.ig": "Instagram",
+        "contact.x": "X / Twitter",
+        "contact.ks": "Kickstarter",
+
+        "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Alle Rechte vorbehalten.",
+        "footer.built": "Erstellt mit GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+      },
+
+      uk: {
+        "header.tagline": "Австралійська студія настільних ігор",
+        "nav.about": "Про нас",
+        "nav.philosophy": "Філософія",
+        "nav.kickstarter": "Kickstarter",
+        "nav.contact": "Контакти",
+
+        "hero.kicker": "Міф • Ритуал • Гра",
+        "hero.title": "Де герої перековуються, а доля набуває форми.",
+        "hero.lead": "Buyan Forge™ — незалежна австралійська студія настільних ігор, що створює оригінальні карткові та настільні проєкти, натхненні давнім фольклором, міфічними світами та вічним циклом долі.",
+        "hero.ctaKickstarter": "Стежити на Kickstarter",
+        "hero.ctaDiscover": "Відкрити Buyan Forge",
+
+        "cards.ip.title": "Оригінальна IP",
+        "cards.ip.text": "Нові світи, нові системи та лор у центрі дизайну.",
+        "cards.folklore.title": "Натхнено фольклором",
+        "cards.folklore.text": "Давні міфи, дивні острови та світи між світами.",
+        "cards.community.title": "Разом із спільнотою",
+        "cards.community.text": "Прозора розробка з фідбеком від гравців і бекерів.",
+
+        "legend.kicker": "Легенда",
+        "legend.title": "Буян",
+        "legend.body1": "Наша назва походить від Буяна — легендарного острова зі слов’янського фольклору, прихованого місця між світами, де долі змінюються, а неможливе стає можливим.",
+        "legend.body2": "У цьому ж дусі Buyan Forge — творча майстерня, де ідеї перековуються у змістовні ігрові враження.",
+
+        "about.title": "Про студію",
+        "about.p1": "Buyan Forge™ створює настільні ігри, що відчуваються як крок у міф — де ризик, зростання та трансформація відбуваються разом за столом.",
+        "about.p2": "Ми віримо, що ігри — це більше, ніж розвага: це ритуали уяви, спільні історії та рішення, які мають значення.",
+        "about.sideKicker": "Що ми створюємо",
+        "about.side1": "Цей проєкт — наш перший крок. Kickstarter допомагає втілити його прозоро, спільно й з громадою в центрі.",
+        "about.side2": "Хочете бути частиною кузні? Стежте за кампанією та приєднуйтеся до подорожі.",
+
+        "philosophy.title": "Філософія дизайну",
+        "philosophy.c1k": "Значущі рішення",
+        "philosophy.c1t": "Напруга, компроміси та вибір, який запам’ятається.",
+        "philosophy.c2k": "Міфічна атмосфера",
+        "philosophy.c2t": "Світобудова, що здається давньою, дивною й живою.",
+        "philosophy.c3k": "Спільна трансформація",
+        "philosophy.c3t": "Гравці змінюються разом — через ризик, тріумф і наслідки.",
+
+        "ks.title": "Kickstarter",
+        "ks.p1": "Ми оживляємо нашу першу гру на Kickstarter — відкрито, з регулярними оновленнями та участю спільноти.",
+        "ks.p2": "Стежте за сторінкою, щоб отримати сповіщення про запуск.",
+        "ks.cta": "Перейти на Kickstarter",
+        "ks.cta2": "Отримати сповіщення",
+
+        "contact.title": "Контакти",
+        "contact.lead": "Стежте за Buyan Forge та приєднуйтеся:",
+        "contact.ig": "Instagram",
+        "contact.x": "X / Twitter",
+        "contact.ks": "Kickstarter",
+
+        "footer.copyright": "© <span id=\"y\"></span> Buyan Forge™. Усі права захищено.",
+        "footer.built": "Зроблено на GitHub Pages • <a href=\"https://www.instagram.com/buyanforge\" target=\"_blank\" rel=\"noopener\">Instagram</a> • <a href=\"https://x.com/BuyanForge\" target=\"_blank\" rel=\"noopener\">X</a> • <a href=\"https://www.kickstarter.com/profile/buyanforge\" target=\"_blank\" rel=\"noopener\">Kickstarter</a>"
+      }
+    };
+
+    // ---------- helpers ----------
+    function detectLanguage() {
+      const saved = localStorage.getItem("bf_lang");
+      if (saved && I18N[saved]) return saved;
+
+      const nav = (navigator.language || "en").toLowerCase();
+      if (nav.startsWith("ru")) return "ru";
+      if (nav.startsWith("de")) return "de";
+      if (nav.startsWith("uk")) return "uk";
+      return "en";
+    }
+
+    function applyTranslations(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      // set <html lang="">
+      document.documentElement.setAttribute("lang", lang);
+
+      // translate elements with data-i18n
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = dict[key];
+        if (!val) return;
+
+        // allow HTML for footer strings (links)
+        if (key.startsWith("footer.")) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      });
+
+      // keep year updated (footer translation rewrites it)
+      const y = document.getElementById("y");
+      if (y) y.textContent = new Date().getFullYear();
+    }
+
+    // ---------- init ----------
+    (function init() {
+      const langSelect = document.getElementById("lang");
+      const initial = detectLanguage();
+
+      langSelect.value = initial;
+      applyTranslations(initial);
+
+      langSelect.addEventListener("change", () => {
+        const next = langSelect.value;
+        localStorage.setItem("bf_lang", next);
+        applyTranslations(next);
+      });
+    })();
   </script>
 </body>
 </html>
